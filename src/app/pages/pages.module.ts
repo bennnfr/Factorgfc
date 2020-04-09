@@ -23,8 +23,15 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
 import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { CrearUsuarioComponent } from './usuarios/crearusuario.component';
+import { VerUsuariosComponent } from './usuarios/verusuarios.component';
+
 // Pipes
 import { PipesModule } from '../pipes/pipes.module';
+
+
+
+
 
 @NgModule({
     declarations: [
@@ -36,7 +43,9 @@ import { PipesModule } from '../pipes/pipes.module';
         GraficoDonaComponent,
         AccoutSettingsComponent,
         PromesasComponent,
-        RxjsComponent
+        RxjsComponent,
+        CrearUsuarioComponent,
+        VerUsuariosComponent
     ],
     exports: [
         DashboardComponent,

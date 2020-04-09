@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuarioService } from '../services/service.index';
 import { Usuario } from '../models/usuario.model';
-import swal2 from 'sweetalert2';
+// import swal2 from 'sweetalert2';
 
 declare function init_plugins();
 declare const gapi: any;
@@ -78,23 +78,6 @@ export class LoginComponent implements OnInit {
 
     this._usuarioService.login( usuario, forma.value.recuerdame )
                   .subscribe( correcto => this.router.navigate(['/dashboard'])  );
-
-                  const Toast = swal2.mixin({
-                    toast: true,
-                    position: 'bottom-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    onOpen: (toast) => {
-                      toast.addEventListener('mouseenter', swal2.stopTimer)
-                      toast.addEventListener('mouseleave', swal2.resumeTimer)
-                    }
-                  })
-
-                  Toast.fire({
-                    icon: 'success',
-                    title: 'Sesion Iniciada'
-                  });
 
     // this.router.navigate([ '/dashboard' ]);
 

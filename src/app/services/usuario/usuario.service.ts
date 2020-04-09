@@ -3,7 +3,7 @@ import { Usuario, Usuario2 } from '../../models/usuario.model';
 import { HttpClient } from '@angular/common/http';
 import { URL_SERVICIOS, SECRET_KEY } from '../../config/config';
 import * as swal from 'sweetalert';
-import swal2 from 'sweetalert2';
+import Swal2 from 'sweetalert2';
 
 import 'rxjs/add/operator/map';
 import { Router } from '@angular/router';
@@ -59,7 +59,7 @@ export class UsuarioService {
 
   logout() {
 
-    swal2.fire({
+    Swal2.fire({
       title: 'Cerrar Sesion?',
       text: `Se cerrara la sesion actual`,
       icon: 'question',
@@ -76,11 +76,11 @@ export class UsuarioService {
         localStorage.removeItem('emailuser');
         localStorage.removeItem('expiratoken');
         this.router.navigate(['/login']);
-        swal2.fire(
-          'Terminó la sesion',
-          'Correctamente',
-          'info'
-                  );
+        Swal2.fire(
+    'Terminó la sesion',
+    'Correctamente',
+    'info'
+  );
       }
     });
 
